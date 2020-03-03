@@ -30,7 +30,8 @@ module Rooftop
                     :ssl_options,
                     :proxy,
                     :resource_route_map,
-                    :post_type_mapping
+                    :post_type_mapping,
+                    :enable_preview_support
 
       def perform_object_caching=(perform_caching)
         if perform_caching.is_a?(Proc)
@@ -53,6 +54,7 @@ module Rooftop
         @ssl_options = {}
         @resource_route_map = {}
         @logger = nil
+        @enable_preview_support = true
       end
     end
   end
